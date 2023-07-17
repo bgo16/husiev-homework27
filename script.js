@@ -71,6 +71,8 @@ function renderCategories() {
 }
 
 function renderProducts(productsList) {
+    productList.innerHTML = '';
+    productInfo.innerHTML = '';
   productsList.forEach((product) => {
     const li = document.createElement('li');
     li.textContent = product.name;
@@ -80,6 +82,7 @@ function renderProducts(productsList) {
 }
 
 function renderProductInfo(product) {
+  productInfo.innerHTML = '';
   const name = document.createElement('li');
   name.textContent = 'Name: ' + product.name;
   const info = document.createElement('li');
